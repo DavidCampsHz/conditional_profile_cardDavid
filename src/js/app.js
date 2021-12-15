@@ -26,7 +26,6 @@ function render(variables = {}) {
   console.log("These are the current variables: ", variables); //print on the console
   // here we ask the logical questions to make decisions on how to build the html
   // if includeCover==false then we reset the cover code without the <img> tag to make the cover transparent.
-  let cover = `<div class="cover"><img src="${variables.background}" /></div>`;
   let background_display;
   let background_image;
 
@@ -41,6 +40,9 @@ function render(variables = {}) {
   background_image.style.display = background_display;
   document.querySelector("#profile-image").src = variables.avatarURL;
   background_image.src = variables.background;
+
+  document.querySelector("#city-profile").textContent = variables.city;
+
   // reset the website body with the new html output
   // document.querySelector("#that-image-id").src = variables.background;
 
