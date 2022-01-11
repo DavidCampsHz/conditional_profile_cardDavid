@@ -41,8 +41,27 @@ function render(variables = {}) {
   document.querySelector("#profile-image").src = variables.avatarURL;
   background_image.src = variables.background;
 
-  document.querySelector("#city-profile").textContent = variables.city;
+  document.querySelector("#role").textContent = variables.role;
 
+  document.querySelector("#city-profile").textContent = variables.city;
+  document.querySelector("#country-profile").textContent = variables.country;
+
+  document.querySelector("#icons-position").className =
+    variables.socialMediaPosition;
+  document.querySelector("#full-name").innerHTML =
+    variables.name + " " + variables.lastname;
+
+  document.querySelector("#twitter").href =
+    "https://twitter.com/" + variables.twitter;
+
+  document.querySelector("#github").href =
+    "https://github.com/" + variables.github;
+
+  document.querySelector("#linkedIn").href =
+    "https://es.linkedin.com/" + variables.linkedin;
+
+  document.querySelector("#instagram").href =
+    "https://www.instagram.com/" + variables.instagram;
   // reset the website body with the new html output
   // document.querySelector("#that-image-id").src = variables.background;
 
@@ -80,8 +99,8 @@ window.onload = function() {
     github: "alesanchezr",
     linkedin: null,
     instagram: null,
-    name: null,
-    lastname: null,
+    name: "",
+    lastname: "",
     role: null,
     country: null,
     city: null
